@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggle = document.getElementById('interruptor');
     const body = document.body;
     const themeIcon = themeToggle.querySelector('.theme-icon');
     
-    const darkMode = localStorage.getItem('modo-oscuro') === 'true';
-    
-    if (darkMode) {
+    const modoOscuro = localStorage.getItem('modo-oscuro') === 'true';
+
+    if (modoOscuro) {
         body.classList.add('modo-oscuro');
         themeIcon.textContent = '☀️';
     }
