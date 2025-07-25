@@ -1,6 +1,3 @@
 # MGL Webpage
-
-## ¿Qué es MGL Webpage?
-
-JuegosEnWeb es una página web estática (HTML + CSS + JavaScript) que reúne varios minijuegos interactivos que pueden ejecutarse directamente en el navegador sin instalar nada.  
-El objetivo es ofrecer una experiencia de juego rápida y sencilla: entras, eliges un juego y juegas —sin cuentas, sin logins y sin descargas.
+MGL Webpage It's a static website (HTML + CSS + JavaScript) that combines several interactive mini-games that can be run directly in the browser without installing anything.
+The goal is to offer a quick and easy gaming experience: just choose a game, and play—no accounts, no logins, and no downloads.
