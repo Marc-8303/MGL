@@ -10,3 +10,8 @@ The goal is to offer a quick and easy gaming experience: just choose a game, and
 - 🌙 **Light/Dark Theme**: button to switch between themes.
 - 🚀 **Auto-deployment**: every push to the `main` branch is published to GitHub Pages.
 
+# License
+This project is distributed under the MIT License.
+See LICENSE for details.
+
+
