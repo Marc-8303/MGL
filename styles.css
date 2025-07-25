@@ -5,12 +5,14 @@ body {
     background-color: #ffffff;
     color: #333333;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
 }
 
 h1 {
     color: #333;
 }
 
+/* LO DEL MODO OSCURO Y CLARO*/
 body.modo-oscuro {
     background-color: #222222;
     color: #f5f5f5;
@@ -59,4 +61,83 @@ body.modo-oscuro .modo-btn {
 
 body.modo-oscuro .modo-btn:hover {
     background-color: #e6bc00;
+}
+
+/* LO DEL ESPACIADO */
+.contenedor-principal {
+    max-width: calc(100% - 900px);
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* LAS LINEAS */
+.contenedor-principal::before, 
+.contenedor-principal::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 2px dashed #888888;
+    z-index: -1;
+    transition: border-color 0.3s ease;
+}
+
+.contenedor-principal::before {
+    left: calc(50% - (100% - 900px) / 2);
+}
+
+.contenedor-principal::after {
+    right: calc(50% - (100% - 900px) / 2);
+}
+
+/* Cambio de color en modo oscuro */
+body.modo-oscuro .contenedor-principal::before, 
+body.modo-oscuro .contenedor-principal::after {
+    border-color: #aaaaaa;
+}
+
+/* TODO LO RESPONSIVE (CHATGPT) */
+@media (max-width: 1200px) {
+    .contenedor-principal {
+        max-width: calc(100% - 400px);
+    }
+    
+    .contenedor-principal::before {
+        left: calc(50% - (100% - 400px) / 2);
+    }
+    
+    .contenedor-principal::after {
+        right: calc(50% - (100% - 400px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        max-width: calc(100% - 100px);
+    }
+    
+    .contenedor-principal::before {
+        left: calc(50% - (100% - 100px) / 2);
+    }
+    
+    .contenedor-principal::after {
+        right: calc(50% - (100% - 100px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal {
+        max-width: calc(100% - 40px);
+    }
+    
+    .contenedor-principal::before {
+        left: 20px;
+    }
+    
+    .contenedor-principal::after {
+        right: 20px;
+    }
 }
